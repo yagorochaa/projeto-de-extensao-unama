@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --verde: #10723f;
+  --vermelho: #c00f0c;
+  --azul: #15244f;
+  --cinza: #5e70a5;
+}
