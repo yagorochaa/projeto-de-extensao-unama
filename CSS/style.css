@@ -161,7 +161,7 @@ footer {
 }
 
 #footer-logo-escola {
-  width: clamp(130px, 10vw, 130px);
+  width: clamp(100px, 10vw, 130px);
   height: auto;
 }
 
@@ -188,6 +188,6 @@ footer {
 }
 
 #footer-logo-prefeitura {
-  width: clamp(70px, 5vw, 80px);
+  width: clamp(60px, 5vw, 80px);
   height: auto;
 }
