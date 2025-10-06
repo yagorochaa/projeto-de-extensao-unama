@@ -25,7 +25,7 @@ body {
 header {
   background-color: var(--verde);
   display: flex;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   justify-content: space-between;
   flex-flow: row nowrap;
@@ -50,8 +50,8 @@ header {
 
 .menu-btn > span {
   display: block;
-  height: 3px;
-  width: 100%;
+  height: clamp(3px, 0.5vw, 3px); /* Altura responsiva */
+  width: clamp(30px, 6vw, 50px); /* Largura responsiva */
   background-color: white;
   border-radius: 3px;
   transition: 0.3s;
@@ -77,7 +77,8 @@ li {
 
 div#menu ul,
 li:hover {
-  background: var(--cinza);
+  background: none;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -132,12 +133,12 @@ div#nome-escola {
   text-align: center;
   color: white;
   align-self: center;
-  font-size: clamp(0.1rem, 1.9vw, 1rem);
+  font-size: clamp(0.3rem, 1.9vw, 1rem);
 }
 
 div#logo > img {
-  height: 100px;
-  width: 150px;
+  width: clamp(90px, 10vw, 110px);
+  height: auto;
   align-items: center;
 }
 
@@ -151,6 +152,42 @@ section {
 }
 
 footer {
-  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--verde);
+}
+
+#footer-logo-escola {
+  width: clamp(130px, 10vw, 130px);
+  height: auto;
+}
+
+#lista-contatos {
+  color: white;
+  padding: 0px;
+  text-align: center;
+}
+
+#lista-contatos > h1 {
+  font-size: clamp(1.8rem, 2vw, 10rem);
+}
+
+#lista-contatos > ol > li {
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
+  text-align: start;
+  padding: 5px;
+}
+
+#lista-contatos ol li:hover {
+  text-decoration: none;
+  background: none;
+  cursor: default;
+}
+
+#footer-logo-prefeitura {
+  width: clamp(70px, 5vw, 80px);
+  height: auto;
 }
