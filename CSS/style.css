@@ -161,7 +161,7 @@ footer {
 }
 
 #footer-logo-escola {
-  width: clamp(100px, 10vw, 130px);
+  width: clamp(90px, 10vw, 130px);
   height: auto;
 }
 
@@ -172,11 +172,11 @@ footer {
 }
 
 #lista-contatos > h1 {
-  font-size: clamp(1.8rem, 2vw, 10rem);
+  font-size: clamp(1.5rem, 2vw, 10rem);
 }
 
 #lista-contatos > ol > li {
-  font-size: clamp(0.9rem, 1.9vw, 1rem);
+  font-size: clamp(0.7rem, 1.9vw, 1rem);
   text-align: start;
   padding: 5px;
 }
@@ -188,6 +188,6 @@ footer {
 }
 
 #footer-logo-prefeitura {
-  width: clamp(60px, 5vw, 80px);
+  width: clamp(50px, 5vw, 80px);
   height: auto;
 }
