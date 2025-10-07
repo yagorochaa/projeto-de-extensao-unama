@@ -70,14 +70,6 @@ div#menu {
   z-index: 1001;
 }
 
-a:focus,
-button:focus,
-input:focus,
-.menu-btn:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 div#menu ul,
 li {
   padding: 15px;
@@ -189,7 +181,7 @@ footer {
   padding: 5px;
 }
 
-#lista-contatos > ol > li > i{
+#lista-contatos > ol > li > i {
   padding: 5px;
 }
 
