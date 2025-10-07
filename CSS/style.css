@@ -70,6 +70,14 @@ div#menu {
   z-index: 1001;
 }
 
+a:focus,
+button:focus,
+input:focus,
+.menu-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 div#menu ul,
 li {
   padding: 15px;
@@ -161,7 +169,7 @@ footer {
 }
 
 #footer-logo-escola {
-  width: clamp(90px, 10vw, 130px);
+  width: clamp(80px, 10vw, 160px);
   height: auto;
 }
 
@@ -181,6 +189,10 @@ footer {
   padding: 5px;
 }
 
+#lista-contatos > ol > li > i{
+  padding: 5px;
+}
+
 #lista-contatos ol li:hover {
   text-decoration: none;
   background: none;
@@ -188,6 +200,6 @@ footer {
 }
 
 #footer-logo-prefeitura {
-  width: clamp(50px, 5vw, 80px);
+  width: clamp(60px, 10vw, 120px);
   height: auto;
 }
