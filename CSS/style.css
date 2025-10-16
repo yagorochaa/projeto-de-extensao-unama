@@ -50,8 +50,8 @@ header {
 
 .menu-btn > span {
   display: block;
-  height: clamp(3px, 0.5vw, 3px); 
-  width: clamp(30px, 6vw, 50px); 
+  height: clamp(3px, 0.5vw, 3px);
+  width: clamp(30px, 6vw, 50px);
   background-color: white;
   border-radius: 3px;
   transition: 0.3s;
@@ -70,12 +70,12 @@ div#menu {
   z-index: 1001;
 }
 
-div#menu ul,
+div#menu ul
 li {
   padding: 15px;
 }
 
-div#menu ul,
+div#menu ul
 li:hover {
   background: none;
   text-decoration: none;
@@ -151,11 +151,63 @@ img#escola-frente {
 
 section {
   height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  border: 1px solid gray;
-  border-radius: 53px;
+  display: flex; /*tirar ao final do projeto*/
+  justify-content: center; /*tirar ao final do projeto*/
+  border: 1px solid gray; /*tirar ao final do projeto*/
+  border-radius: 53px; /*tirar ao final do projeto*/
   padding-top: 110px;
+}
+
+section#sobre {
+  display: flex;
+  flex-direction: column;
+  border: 0px; /*tirar ao final do projeto*/
+  height: auto;
+}
+
+section#sobre > h2 {
+  color: var(--verde);
+  align-self: center;
+  font-size: clamp(2rem, 10vw, 12rem);
+}
+
+div#historia-sobre {
+  border: 1px solid var(--vermelho);
+  border-radius: 5px;
+  margin: 25px;
+}
+
+div#historia-sobre > p {
+  text-indent: 25px;
+  padding: 10px;
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: clamp(0.9rem, 2vw, 4rem);
+}
+
+div#Gestão {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+div#Gestão > h2 {
+  color: var(--verde);
+  font-size: clamp(2rem, 10vw, 12rem);
+}
+
+div#Gestão-sobre {
+  border: 1px solid var(--vermelho);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  margin: 25px;
+}
+
+div#Gestão-sobre > p {
+  text-indent: 15px;
+  text-align: justify;
+  font-size: clamp(0.8rem, 2vw, 4rem);
+  line-height: 1.5em;
 }
 
 footer {
@@ -174,7 +226,6 @@ footer {
 
 #lista-contatos {
   color: white;
-  padding: 0px;
   text-align: center;
 }
 
@@ -185,7 +236,7 @@ footer {
 #lista-contatos > ol > li {
   font-size: clamp(0.7rem, 1.9vw, 1rem);
   text-align: start;
-  padding: 5px;
+  line-height: 2em;
 }
 
 #lista-contatos > ol > li > i {
