@@ -23,35 +23,38 @@ body {
 }
 
 header {
-  background-color: var(--verde);
   display: flex;
-  width: 100%;
-  position: fixed;
   justify-content: space-between;
   flex-flow: row nowrap;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: var(--verde);
 }
 
 #menu-toggle {
   display: none;
-  align-self: flex-start;
 }
 
 .menu-btn {
-  position: relative;
-  width: 50px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 1002;
   display: flex;
+  align-items: center;
+  position: relative;
   flex-direction: column;
   justify-content: space-between;
-  margin: 30px 0px 0px 30px;
+  width: 60px;
+  height: 21px;
+  margin-left: 2vw;
+  cursor: pointer;
+  z-index: 1002;
+
 }
 
 .menu-btn > span {
   display: block;
   height: clamp(3px, 0.5vw, 3px);
-  width: clamp(30px, 6vw, 50px);
+  width: clamp(35px, 3vw, 50px);
   background-color: white;
   border-radius: 3px;
   transition: 0.3s;
@@ -128,14 +131,18 @@ a {
 div#nome-escola {
   height: 65px;
   width: 515px;
+  display: flex;
   text-align: center;
   color: white;
-  align-self: center;
   font-size: clamp(0.3rem, 1.9vw, 1rem);
 }
 
+div#nome-escola > h1 {
+  align-self: center;
+}
+
 img#logo-escola {
-  width: clamp(90px, 10vw, 110px);
+  width: clamp(80px, 10vw, 130px);
   height: auto;
   align-items: center;
 }
