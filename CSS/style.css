@@ -76,6 +76,7 @@ div#menu ul > li {
   padding: 15px;
   list-style: none;
   font-size: clamp(1rem, 7vw, 3rem);
+  list-style: none;
 }
 
 a {
@@ -347,17 +348,19 @@ footer {
   font-size: clamp(1.5rem, 2vw, 10rem);
 }
 
-#lista-contatos > ol > li {
+#lista-contatos > ul > li {
   font-size: clamp(0.7rem, 1.9vw, 1rem);
   text-align: start;
   line-height: 2em;
+  list-style: none;
 }
 
-#lista-contatos > ol > li > i {
+#lista-contatos > ul > li > i {
   padding: 5px;
+  margin-left: 2px;
 }
 
-#lista-contatos ol li:hover {
+#lista-contatos ul li:hover {
   text-decoration: none;
   background: none;
   cursor: default;
