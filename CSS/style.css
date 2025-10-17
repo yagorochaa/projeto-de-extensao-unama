@@ -48,7 +48,6 @@ header {
   margin-left: 2vw;
   cursor: pointer;
   z-index: 1002;
-
 }
 
 .menu-btn > span {
@@ -64,7 +63,7 @@ div#menu {
   position: fixed;
   top: 0;
   left: -250px;
-  width: 250px;
+  width: auto;
   height: 100%;
   background-color: var(--cinza);
   color: white;
@@ -73,8 +72,15 @@ div#menu {
   z-index: 1001;
 }
 
-div#menu ul li {
+div#menu ul > li {
   padding: 15px;
+  list-style: none;
+  font-size: clamp(1rem, 7vw, 3rem);
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 div#menu ul li:hover {
@@ -116,16 +122,6 @@ div#menu ul li:hover {
 #menu-toggle:checked + .menu-btn span:nth-child(3) {
   transform: rotate(-45deg) translateY(-13px);
   background: white;
-}
-
-div#menu > ul > li {
-  list-style: none;
-  font-size: 48px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
 }
 
 div#nome-escola {
