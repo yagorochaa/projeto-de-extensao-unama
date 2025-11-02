@@ -251,10 +251,9 @@ img.foto {
   aspect-ratio: 1 / 1;
   width: clamp(100px, 30vw, 700px);
   border-radius: 5px;
-  border: 1px solid black;
   flex: 0 1 auto;
-  margin-top: .4em;
-  margin-bottom: .4em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 
 section#saeb {
@@ -266,52 +265,86 @@ section#saeb {
 
 section#saeb > h2 {
   color: var(--verde);
-  align-self: center;
-  font-size: clamp(1.2rem, 4vw, 12rem);
+  font-size: clamp(1rem, 3vw, 10rem);
   margin-bottom: 50px;
+  text-align: center;
 }
 
 h3.saeb {
-  margin: 25px;
-  font-size: clamp(1.1rem, 2vw, 12rem);
-  align-self: center;
+  font-size: clamp(1rem, 2vw, 12rem);
+  text-align: center;
 }
 
-div#oque-saeb {
-  margin: 25px;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-div#oque-saeb > p {
+section#saeb > p {
   text-align: justify;
   text-indent: 25px;
   line-height: 1.5em;
-  font-size: clamp(0.9rem, 2vw, 4rem);
+  font-size: clamp(0.9rem, 1.6vw, 3rem);
+  margin: 25px;
 }
 
-div#pq-importante {
-  margin: 25px;
+div#contêier {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  margin-bottom: clamp(10px, 5vw, 60px);
+}
+
+div#saeb {
+  display: flex;
+  flex-flow: column wrap;
+  width: clamp(200px, 740px, 900px);
+}
+
+div#saeb > ul {
+  margin: 10px 0px 0px 25px;
+}
+
+div#saeb > ul > li {
+  font-size: clamp(0.9rem, 1.6vw, 2.5rem);
+  text-align: left;
+  margin-bottom: clamp(1px, 5vw, 150px);
+}
+
+div#foto-recebendo {
   display: flex;
   flex-flow: column nowrap;
+  align-self: flex-end;
 }
 
-div#pq-importante > ul > li {
-  margin: 0px 25px 0px 25px;
-  line-height: 2.5em;
-  font-size: clamp(1rem, 2vw, 4rem);
+div#foto-recebendo > img {
+  aspect-ratio: 4 / 3;
+  width: clamp(180px, 46vw, 900px);
+  border-radius: 5px;
+  margin-right: 12px;
 }
 
-div#qm-participa {
-  margin: 25px;
+div#foto-recebendo > p {
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  text-align: center;
+  color: var(--verde);
+}
+
+div#galeria {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
-div#qm-participa > ul > li {
-  margin: 0px 25px 0px 25px;
-  line-height: 2.5em;
-  font-size: clamp(1rem, 2vw, 4rem);
+div.foto {
+  text-align: center;
+}
+
+div.foto img {
+  aspect-ratio: 4 / 3;
+  width: clamp(130px, 46vw, 900px);
+  border-radius: 5px;
+  flex: 0 1 auto;
+}
+
+div > p.foto {
+  color: var(--verde);
+  font-size: clamp(0.8rem, 1.9vw, 1.5rem);
 }
 
 footer {
@@ -358,4 +391,25 @@ footer {
 #footer-logo-prefeitura {
   width: clamp(60px, 10vw, 120px);
   height: auto;
+}
+
+@media (max-width: 560px) {
+  div#contêier {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-left: 15px;
+  }
+
+  div#saeb > ul {
+    margin: 10px 0px 0px 10px;
+  }
+
+  div#saeb > ul > li {
+    margin-bottom: clamp(1px, 3vw, 150px);
+  }
+  
+  div#foto-recebendo > img {
+    width: clamp(290px, 46vw, 900px);
+  }
+
 }
