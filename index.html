@@ -46,7 +46,31 @@
     />
 
     <section id="inicio">
-      <h2>inicio</h2>
+      <div class="secao-inicio">
+        <div class="coluna-esquerda">
+          <div class="retangulo-decorativo superior"></div>
+          <h1 class="titulo-projetos">PROJETOS</h1>
+          <a href="#" class="btn-mais-projetos">Mais projetos</a>
+          <div class="retangulo-decorativo inferior"></div>
+        </div>
+          <button class="seta-nav esquerda"><i class="fa-solid fa-circle-arrow-right"></i></button>
+        <div class="card-principal">
+          <div class="card-conteudo">
+            <div class="card-imagem">
+            <img class="img-card-fit" src="FOTOS/Projetos/Aulao Saeb/aulao-saeb1.jpeg" alt=""> 
+            <p class="credito-foto">Crédito: Anônimo</p>
+            </div>
+            <div class="card-texto">
+              <h2>Título do Projeto</h2>
+              <p class="descricao">Uma breve descrição sobre o projeto aparecerá aqui.</p>
+              <p class="data">01/01/0001</p>
+              <a href="" class="btn-leia-mais">Leia Mais</a>
+            </div>
+          </div>
+        </div>
+          <button class="seta-nav direita"><i class="fa-solid fa-circle-arrow-right"></i></button>
+      </div>
+
     </section>
     <section id="sobre">
       <h2 id="historia">Nossa História</h2>
@@ -136,7 +160,29 @@
     <div class="divisão"></div>
 
     <section id="projetos">
-      <h2>projetos</h2>
+      <h2>Projetos</h2>
+      <div class="galeria-grid">
+    <div class="galeria-item" onclick="abrirGaleria('FOTOS/Projetos/Aulao Saeb/aulao-saeb1.jpeg', 'Aulão SAEB')">
+      <img src="FOTOS/Projetos/Aulao Saeb/aulao-saeb1.jpeg" alt="Foto do aulão saeb">
+      <div class="overlay-texto">Aulão SAEB</div>
+    </div>
+    
+    <div class="galeria-item" onclick="abrirGaleria('FOTOS/Saeb/fazendo prova 1.jpg', 'Aplicação SAEB')">
+      <img src="FOTOS/Saeb/fazendo prova 1.jpg" alt="Alunos fazedno a prova saeb">
+      <div class="overlay-texto">Aplicação SAEB</div>
+    </div>
+    
+    <div class="galeria-item" onclick="abrirGaleria('FOTOS/Projetos/Reuniao Pais/reuniao-pais.jpeg', 'Reunião com pais e responsaveis')">
+      <img src="FOTOS/Projetos/Reuniao Pais/reuniao-pais.jpeg" alt="Reuniao da escola com pais e responsaveis">
+      <div class="overlay-texto">Reuniao com pais e responsaveis</div>
+    </div>
+  </div>
+
+  <div id="modal-galeria" class="modal" onclick="fecharGaleria()">
+    <span class="fechar">&times;</span>
+    <img class="modal-conteudo" id="img-modal">
+    <div id="caption"></div>
+  </div>
     </section>
     <div class="divisão"></div>
 
@@ -219,5 +265,6 @@
         alt="logo-prefeitura"
       />
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

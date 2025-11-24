@@ -31,6 +31,7 @@ header {
   width: 100%;
   height: auto;
   background-color: var(--verde);
+  z-index: 999;
 }
 
 #menu-toggle {
@@ -161,6 +162,150 @@ section {
   padding-bottom: 100px;
 }
 
+.secao-inicio {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.coluna-esquerda {
+  flex-shrink: 0;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.titulo-projetos {
+  font-size: 2.5em;
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.btn-mais-projetos {
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid var(--vermelho);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--vermelho);
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.card-principal {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.card-conteudo {
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.card-imagem {
+  flex: 0 0 40%; 
+  position: relative; 
+  height: 100%;
+}
+
+.img-card-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+} 
+
+.credito-foto {
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.7em;
+  padding: 3px;
+  text-align: center;
+  z-index: 1;
+}
+
+.card-texto {
+  flex: 1; 
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.card-texto h2 {
+    color: var(--verde);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-texto p {
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.card-texto .descricao {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-texto .data {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.btn-leia-mais {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #2e5c46;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-leia-mais:hover {
+  background-color: white;
+}
+
+.seta-nav {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--vermelho);
+  margin: 0 5px;
+  transform: rotate(0deg);
+}
+
+.seta-nav.esquerda {
+  transform: rotate(180deg);
+}
+
+div.divisão {
+  height: 80px;
+  width: auto;
+  background-color: var(--azul);
+}
+
 div.divisão {
   height: 80px;
   width: auto;
@@ -254,6 +399,117 @@ img.foto {
   flex: 0 1 auto;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
+}
+
+section#projetos > h2 {
+  color: var(--verde);
+  align-self: center;
+  font-size: clamp(2rem, 10vw, 12rem);
+}
+
+#projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  min-height: 80vh;
+}
+
+.galeria-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.galeria-item {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+  transform: scale(1.05); 
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-texto {
+  position: absolute;
+  bottom: 0;
+  background: rgba(16, 114, 63, 0.8); 
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%;
+  object-fit: contain;
+  margin-top: 60px;
+  border: 2px solid white;
+  animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
 
 section#saeb {
