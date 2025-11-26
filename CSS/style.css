@@ -730,16 +730,109 @@ footer {
   .seta-nav.direita { right: 10px; }
 }
 
-@media (max-width: 600px) {
-  .titulo-projetos { font-size: 1.5rem; }
-  .card-texto h2 { font-size: 1.3rem; }
-  .btn-leia-mais { width: 100%; text-align: center; }
-}
+@media (max-width: 900px) {
 
-@media (max-width: 350px) {
-  .galeria-item {
+
+  section {
+    height: auto !important;    
+    min-height: 100vh;             
+    padding-top: 130px;            
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+  }
+
+  .secao-inicio {
+    flex-direction: column;
     width: 100%;
-    height: 300px;
-    flex: 0 0 100%;
+    position: relative; 
+    gap: 10px;
+  }
+
+  .coluna-esquerda {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .retangulo-decorativo {
+    display: none; 
+  }
+
+  .titulo-projetos {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-principal {
+    width: 90%;          
+    max-width: 400px;    
+    margin: 0 auto;      
+  }
+
+  .card-conteudo {
+    flex-direction: column;
+    height: auto;        
+    background: #fff;   
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    overflow: hidden;    
+  }
+
+  .card-imagem {
+    width: 100%;
+    height: 250px;      
+  }
+
+  .img-card-fit {
+    border-radius: 0;    
+  }
+
+  .card-texto {
+    padding: 20px;
+    text-align: center; 
+    align-items: center;
+  }
+
+  .card-texto h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .seta-nav {
+    position: absolute;
+    top: 240px;        
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .seta-nav.esquerda {
+    left: 5%;
+  }
+
+  .seta-nav.direita {
+    right: 5%;
+  }
+
+  .galeria-grid {
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .galeria-item {
+    width: 100%;       
+    max-width: 350px;   
+    height: 250px;      
   }
 }
