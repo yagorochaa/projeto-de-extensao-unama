@@ -163,91 +163,107 @@ section {
 }
 
 .secao-inicio {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .coluna-esquerda {
-  flex-shrink: 0;
-  padding: 0 20px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  min-width: 200px; 
+}
+
+.retangulo-decorativo {
+  width: 100%;     
+  height: 80px;      
+  background-color: var(--azul); 
+  border-radius: 0px; 
 }
 
 .titulo-projetos {
-  font-size: 2.5em;
+  font-size: 2rem;
   color: var(--verde);
-  margin-bottom: 10px;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
 .btn-mais-projetos {
-  display: block;
-  padding: 8px 15px;
+  padding: 8px 20px;
   border: 1px solid var(--vermelho);
   border-radius: 20px;
-  text-decoration: none;
   color: var(--vermelho);
   font-size: 0.9em;
-  margin: 10px 0;
+  transition: 0.3s;
 }
 
 .card-principal {
-  flex-grow: 1;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
-  overflow: hidden;
+flex: 1;
+  background-color: transparent; 
+  border-radius: 0;   
+  box-shadow: none;  
+  border: none;       
+  overflow: visible; 
+  max-width: 900px;
 }
 
 .card-conteudo {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   width: 100%;
-  height: 400px; 
-  overflow: hidden; 
+  height: 400px;
+  gap: 30px; 
 }
 
 .card-imagem {
-  flex: 0 0 40%; 
-  position: relative; 
+  flex: 1;
+  position: relative;
   height: 100%;
 }
 
 .img-card-fit {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 20px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
 } 
 
 .credito-foto {
-  bottom: 5px;
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 0.7em;
-  padding: 3px;
+  font-size: 0.7rem;
+  padding: 5px;
   text-align: center;
-  z-index: 1;
 }
 
 .card-texto {
   flex: 1; 
-  padding: 30px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .card-texto h2 {
-    color: var(--verde);
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  color: var(--verde);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .card-texto p {
@@ -283,7 +299,8 @@ section {
 }
 
 .btn-leia-mais:hover {
-  background-color: white;
+  background-color: var(--vermelho);
+  color: white;
 }
 
 .seta-nav {
@@ -306,16 +323,10 @@ div.divisão {
   background-color: var(--azul);
 }
 
-div.divisão {
-  height: 80px;
-  width: auto;
-  background-color: var(--azul);
-}
-
 section#sobre {
   display: flex;
   flex-direction: column;
-  border: 0px; /*tirar ao final do projeto*/
+  border: 0px; 
   height: auto;
 }
 
@@ -368,7 +379,7 @@ section#estrutura {
   display: flex;
   flex-flow: column nowrap;
   height: auto;
-  border: 0px; /*tirar ao final do projeto*/
+  border: 0px;
 }
 
 section#estrutura > h2 {
@@ -417,15 +428,18 @@ section#projetos > h2 {
 
 .galeria-grid {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
+  flex-wrap: wrap;       
+  justify-content: center; 
+  gap: 20px;             
+  width: 100%;
+  max-width: 1200px;     
+  margin: 30px auto;    
 }
 
 .galeria-item {
   width: 300px;
   height: 300px;
+  flex: 0 0 300px; 
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -435,47 +449,49 @@ section#projetos > h2 {
 }
 
 .galeria-item:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .galeria-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
 }
 
 .overlay-texto {
   position: absolute;
   bottom: 0;
-  background: rgba(16, 114, 63, 0.8); 
-  color: white;
   width: 100%;
-  padding: 10px;
+  background: var(--verde); 
+  color: white;
+  padding: 12px;
   text-align: center;
   font-weight: bold;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .modal {
   display: none; 
-  position: fixed;
-  z-index: 9999;
+  position: fixed; 
+  z-index: 9999; 
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9); 
+  backdrop-filter: blur(5px);
 }
 
 .modal-conteudo {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
-  max-height: 80%;
-  object-fit: contain;
-  margin-top: 60px;
-  border: 2px solid white;
-  animation: zoom 0.6s;
+  max-width: 90%;
+  max-height: 80vh;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: black; 
 }
 
 @keyframes zoom {
@@ -502,14 +518,10 @@ section#projetos > h2 {
 }
 
 #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
   text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
 }
 
 section#saeb {
@@ -668,4 +680,66 @@ footer {
     width: clamp(290px, 46vw, 900px);
   }
 
+}
+
+
+@media (max-width: 900px) {
+  .secao-inicio {
+    flex-direction: column;
+  }
+  
+  .coluna-esquerda {
+    margin-bottom: 20px;
+  }
+
+  .card-conteudo {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .card-imagem {
+    width: 100%;
+    height: 250px; 
+  }
+
+  .card-texto {
+    width: 100%;
+    padding: 20px;
+    align-items: center; 
+    text-align: center;
+  }
+  
+  .secao-inicio {
+    position: relative;
+  }
+  
+  .seta-nav {
+    position: absolute;
+    top: 35%; 
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .seta-nav.esquerda { left: 10px; }
+  .seta-nav.direita { right: 10px; }
+}
+
+@media (max-width: 600px) {
+  .titulo-projetos { font-size: 1.5rem; }
+  .card-texto h2 { font-size: 1.3rem; }
+  .btn-leia-mais { width: 100%; text-align: center; }
+}
+
+@media (max-width: 350px) {
+  .galeria-item {
+    width: 100%;
+    height: 300px;
+    flex: 0 0 100%;
+  }
 }
