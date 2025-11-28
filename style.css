@@ -329,7 +329,7 @@ section#sobre {
 section#sobre > h2 {
   color: var(--verde);
   align-self: center;
-  font-size: clamp(2rem, 10vw, 12rem);
+  font-size: clamp(2.5rem, 6vw, 10rem);
 }
 
 div#historia-sobre {
@@ -354,20 +354,19 @@ div#Gestão {
 
 div#Gestão > h2 {
   color: var(--verde);
-  font-size: clamp(2rem, 10vw, 12rem);
+  font-size: clamp(2rem, 8vw, 10rem);
 }
 
 div#Gestão-sobre {
   border: 1px solid var(--vermelho);
   border-radius: 5px;
-  margin-bottom: 25px;
-  margin: 25px;
+  margin: 0px 25px;
 }
 
 div#Gestão-sobre > p {
   text-indent: 15px;
   text-align: justify;
-  font-size: clamp(0.8rem, 2vw, 4rem);
+  font-size: clamp(0.8rem, 1.8vw, 4rem);
   line-height: 1.5em;
 }
 
@@ -661,6 +660,30 @@ footer {
 }
 
 @media (max-width: 560px) {
+  section {
+    height: calc(100vh - 80px);
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  div#Gestão {
+    flex-flow: column wrap;
+    align-content: center;
+  }
+
+  div#Gestão > h2 {
+    text-align: center;
+  }
+
+  div#Gestão-sobre {
+    width: fit-content;
+  }
+
+  div#Gestão-sobre > p {
+    text-align: left;
+    text-indent: 10px;
+  }
+
   div#contêier {
     flex-flow: row wrap;
     justify-content: space-around;
@@ -734,9 +757,6 @@ footer {
 @media (max-width: 900px) {
   section {
     height: auto !important;
-    min-height: 100vh;
-    padding-top: 130px;
-    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
