@@ -329,7 +329,7 @@ section#sobre {
 section#sobre > h2 {
   color: var(--verde);
   align-self: center;
-  font-size: clamp(2.5rem, 6vw, 10rem);
+  font-size: clamp(2.5rem, 4vw, 10rem);
 }
 
 div#historia-sobre {
@@ -340,10 +340,10 @@ div#historia-sobre {
 
 div#historia-sobre > p {
   text-indent: 25px;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   text-align: justify;
-  line-height: 1.5em;
-  font-size: clamp(0.9rem, 2vw, 4rem);
+  line-height: 1.4em;
+  font-size: clamp(0.9rem, 1.5vw, 4rem);
 }
 
 div#Gestão {
@@ -354,7 +354,7 @@ div#Gestão {
 
 div#Gestão > h2 {
   color: var(--verde);
-  font-size: clamp(2rem, 8vw, 10rem);
+  font-size: clamp(2rem, 6vw, 10rem);
 }
 
 div#Gestão-sobre {
@@ -366,7 +366,7 @@ div#Gestão-sobre {
 div#Gestão-sobre > p {
   text-indent: 15px;
   text-align: justify;
-  font-size: clamp(0.8rem, 1.8vw, 4rem);
+  font-size: clamp(0.8rem, 1.5vw, 4rem);
   line-height: 1.5em;
 }
 
@@ -380,7 +380,7 @@ section#estrutura {
 section#estrutura > h2 {
   color: var(--verde);
   align-self: center;
-  font-size: clamp(2rem, 10vw, 7rem);
+  font-size: clamp(2rem, 4vw, 10rem);
 }
 
 section#estrutura > p {
@@ -389,7 +389,7 @@ section#estrutura > p {
   margin: 25px;
   text-indent: 25px;
   line-height: 1.5em;
-  font-size: clamp(0.9rem, 2vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.4vw, 3rem);
 }
 
 div#foto {
@@ -531,13 +531,13 @@ section#saeb {
 
 section#saeb > h2 {
   color: var(--verde);
-  font-size: clamp(1rem, 3vw, 10rem);
+  font-size: clamp(1rem, 2.5vw, 10rem);
   margin-bottom: 50px;
   text-align: center;
 }
 
 h3.saeb {
-  font-size: clamp(1rem, 2vw, 12rem);
+  font-size: clamp(1rem, 1.5vw, 12rem);
   text-align: center;
 }
 
@@ -545,7 +545,7 @@ section#saeb > p {
   text-align: justify;
   text-indent: 25px;
   line-height: 1.5em;
-  font-size: clamp(0.9rem, 1.6vw, 3rem);
+  font-size: clamp(0.9rem, 1.3vw, 3rem);
   margin: 25px;
 }
 
@@ -567,7 +567,7 @@ div#saeb > ul {
 }
 
 div#saeb > ul > li {
-  font-size: clamp(0.9rem, 1.6vw, 2.5rem);
+  font-size: clamp(0.9rem, 1.4vw, 2.5rem);
   text-align: left;
   margin-bottom: clamp(1px, 5vw, 150px);
 }
